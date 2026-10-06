@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Krishan Kumar — AI / ML Engineer</title>
+  <meta name="description" content="Portfolio of Krishan Kumar — Computer Science Engineering student specializing in AI, Machine Learning and Cybersecurity.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Instrument+Serif:ital@0;1&family=Manrope:wght@300..800&family=Space+Mono:ital,wght@0,400;0,700&display=swap" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="lock">
+
+<!-- Wipe Intro Overlay -->
+<div id="wipe" aria-hidden="true">
+  <span class="wipe-name">Krishan Kumar</span>
+  <span class="wipe-sub">PORTFOLIO — MMXXV</span>
+  <span class="wipe-bar"><i></i></span>
+</div>
+
+<div class="grain" aria-hidden="true"></div>
+
+<!-- Custom Cursor -->
+<div class="cur-dot" aria-hidden="true"></div>
+<div class="cur-ring" aria-hidden="true"><span class="cur-label"></span></div>
+
+<!-- Navigation Bar -->
+<nav id="nav">
+  <a class="brand" href="#top">K<em>—</em>K</a>
+  <div class="nav-links">
+    <a href="#about"><span class="roll"><span>PROFILE</span><span>PROFILE</span></span></a>
+    <a href="#projects"><span class="roll"><span>PROJECTS</span><span>PROJECTS</span></span></a>
+    <a href="#experience"><span class="roll"><span>EXPERIENCE</span><span>EXPERIENCE</span></span></a>
+    <a href="#skills"><span class="roll"><span>SKILLS</span><span>SKILLS</span></span></a>
+    <a href="#contact"><span class="roll"><span>CONTACT</span><span>CONTACT</span></span></a>
+  </div>
+  <button id="menuBtn" aria-label="Toggle menu">
+    <i data-lucide="menu" class="ic-menu"></i><i data-lucide="x" class="ic-x"></i>
+  </button>
+</nav>
+
+<!-- Mobile Menu Overlay -->
+<div id="menuOverlay">
+  <nav class="menu-links">
+    <a href="#about"><span>01</span>Profile</a>
+    <a href="#projects"><span>02</span>Projects</a>
+    <a href="#experience"><span>03</span>Experience</a>
+    <a href="#skills"><span>04</span>Skills</a>
+    <a href="#certs"><span>05</span>Certs</a>
+    <a href="#contact"><span>06</span>Contact</a>
+  </nav>
+  <div class="menu-foot">
+    <span>KRISHANKUMAR01705@GMAIL.COM</span>
+    <span>GITHUB.COM/06K07</span>
+    <span>PUNJAB · INDIA</span>
+  </div>
+</div>
+
+<main>
+
+  <!-- Hero Section -->
+  <section class="hero" id="top">
+    <div class="hero-stage" data-cursor="drag">
+      <canvas id="morph-canvas"></canvas>
+      <div class="stage-hint">PARTICLE SCULPTURE — 2400 POINTS · DRAG TO ROTATE</div>
+    </div>
+
+    <svg class="spin-star" viewBox="0 0 100 100" aria-hidden="true">
+      <path fill="#e24e1b" d="M50 0l7 32 25-21-14 30 32 9-32 9 14 30-25-21-7 32-7-32-25 21 14-30-32-9 32-9-14-30 25 21z"/>
+    </svg>
+
+    <div class="hero-copy wrap">
+      <div class="hero-top rise" style="--d:1s">
+        <span class="eyebrow">( B.TECH — COMPUTER SCIENCE ENGINEERING — CLASS OF 2027 )</span>
+        <span class="avail"><i></i>OPEN TO AI / ML ROLES</span>
+      </div>
+
+      <h1 class="hero-name">
+        <span class="hn-line hn-black rise" style="--d:1.1s" aria-label="KRISHAN">
+          <span class="ltr">K</span><span class="ltr">R</span><span class="ltr">I</span><span class="ltr">S</span><span class="ltr">H</span><span class="ltr">A</span><span class="ltr">N</span>
+        </span>
+        <span class="hn-line hn-serif rise" style="--d:1.22s" aria-label="Kumar">
+          <span class="ltr">K</span><span class="ltr">u</span><span class="ltr">m</span><span class="ltr">a</span><span class="ltr">r</span>
+        </span>
+      </h1>
+
+      <p class="role-line rise" style="--d:1.34s">
+        <span class="pre">currently building</span>
+        <span class="rotor" id="rotor">
+          <span class="rotor-word is-on">deepfake detectors</span>
+          <span class="rotor-word">NLP chatbots</span>
+          <span class="rotor-word">entropy engines</span>
+          <span class="rotor-word">secure networks</span>
+        </span>
+      </p>
+
+      <div class="hero-sub rise" style="--d:1.44s">
+        <p class="hero-desc">Computer Science engineer who designs, trains &amp; deploys intelligent Python systems end-to-end — with the security instincts to keep them honest.</p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn--ink">SEE THE WORK <i data-lucide="arrow-down-right"></i></a>
+          <a href="#contact" class="btn btn--line">GET IN TOUCH</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="morph-ctl rise" style="--d:1.5s">
+      <button class="shape-btn on" data-shape="sphere">01 SPHERE</button>
+      <button class="shape-btn" data-shape="torus">02 TORUS</button>
+      <button class="shape-btn" data-shape="knot">03 KNOT</button>
+      <button class="shape-btn" data-shape="helix">04 HELIX</button>
+      <span class="morph-sep"></span>
+      <button class="zoom-btn" id="zoomIn" aria-label="Zoom in"><i data-lucide="plus"></i></button>
+      <button class="zoom-btn" id="zoomOut" aria-label="Zoom out"><i data-lucide="minus"></i></button>
+    </div>
+
+    <div class="hero-foot rise" style="--d:1.56s">
+      <span class="hf-scroll">SCROLL <i data-lucide="arrow-down"></i></span>
+      <span class="hf-stats">BASED IN PUNJAB, IN <i>/</i> <b>03</b> MAJOR BUILDS <i>/</i> <b>08</b> CERTIFICATIONS</span>
+    </div>
+  </section>
+
+  <!-- Rotated Marquee Strip -->
+  <div class="strip-wrap" aria-hidden="true">
+    <div class="strip">
+      <div class="strip-track">
+        <div class="strip-group">
+          <span>Deep Learning</span><em>◆</em>
+          <span>Cybersecurity</span><em>◆</em>
+          <span>Computer Vision</span><em>◆</em>
+          <span>Natural Language</span><em>◆</em>
+          <span>Python Systems</span><em>◆</em>
+        </div>
+        <div class="strip-group">
+          <span>Deep Learning</span><em>◆</em>
+          <span>Cybersecurity</span><em>◆</em>
+          <span>Computer Vision</span><em>◆</em>
+          <span>Natural Language</span><em>◆</em>
+          <span>Python Systems</span><em>◆</em>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 01 Profile Section -->
+  <section id="about" class="sec">
+    <div class="wrap">
+      <header class="sec-head rv">
+        <span class="sec-idx">01</span>
+        <h2 class="sec-title" data-scramble>PROFILE</h2>
+        <span class="sec-tag">( WHO I AM )</span>
+      </header>
+      <div class="about-grid">
+        <div class="rv">
+          <p class="lead">A result-driven engineer at the intersection of <em>machine intelligence</em> and <em>adversarial thinking</em> — I build systems that learn, then I try to break them.</p>
+        </div>
+        <div>
+          <p class="about-body rv">My work spans deep-learning computer vision — a CNN deepfake detection pipeline — and NLP systems that turn raw text into structured, classifiable signal. Between the two, I've shipped Python applications end-to-end: data, model, API, interface.</p>
+          <p class="about-body rv" style="--d:.08s">On the other side of the stack, I've done real security work — vulnerability assessments, packet-level Wireshark analysis, and enterprise routing configured in Cisco labs. I'm currently seeking a stipend-based AI/ML engineering role to point all of this at hard automation and data problems.</p>
+          <dl class="fact-list rv" style="--d:.16s">
+            <div class="fact"><dt>Location</dt><dd>Punjab, India</dd></div>
+            <div class="fact"><dt>Degree</dt><dd>B.E. — Computer Science Engineering, GNDEC (IKG PTU)</dd></div>
+            <div class="fact"><dt>Graduation</dt><dd>Expected June 2027</dd></div>
+            <div class="fact"><dt>Languages</dt><dd>English · Hindi · Punjabi · Bengali (conversational)</dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 Projects Section -->
+  <section id="projects" class="sec">
+    <div class="wrap">
+      <header class="sec-head rv">
+        <span class="sec-idx">02</span>
+        <h2 class="sec-title" data-scramble>PROJECTS</h2>
+        <span class="sec-tag">( CLICK A CARD TO FLIP IT )</span>
+      </header>
+
+      <div class="proj-grid">
+        <!-- N.01 Deepfake Detection -->
+        <article class="flip-card pc-1 rv" role="button" tabindex="0" aria-pressed="false" aria-label="Deepfake Detection System — flip card for details">
+          <div class="flip-inner">
+            <div class="flip-face flip-face--front">
+              <div class="pj-top"><span>CNN VISION PIPELINE</span><span>2026</span></div>
+              <div class="pj-no">Nº 01</div>
+              <h3 class="pj-title">DEEPFAKE DETECTION SYSTEM</h3>
+              <p class="pj-hook">A convolutional network that calls out manipulated media in real time.</p>
+              <figure class="pj-media">
+                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 210'><rect width='400' height='210' fill='%23faf7ee'/><g stroke='%231c1a15' stroke-width='1' opacity='.16'><path d='M0 35H400M0 70H400M0 105H400M0 140H400M0 175H400M80 0V210M160 0V210M240 0V210M320 0V210'/></g><rect x='140' y='45' width='120' height='120' fill='none' stroke='%23e24e1b' stroke-width='2'/><path d='M140 60V45h16M244 45h16v15M156 165h-16v-15M260 150v15h-16' fill='none' stroke='%23e24e1b' stroke-width='5'/><circle cx='175' cy='90' r='7' fill='%231c1a15'/><circle cx='225' cy='90' r='7' fill='%231c1a15'/><path d='M170 128q30 18 60 0' fill='none' stroke='%231c1a15' stroke-width='3'/><text x='18' y='26' font-family='monospace' font-size='12' fill='%23e24e1b'>SCAN :: MANIPULATED MEDIA</text><text x='228' y='200' font-family='monospace' font-size='12' fill='%231c1a15'>VERDICT — FAKE 98.4%</text></svg>" alt="Deepfake detection scan preview — face wireframe in a vermilion detection box" loading="lazy">
+                <figcaption><span>FIG. 01 — DETECTION PREVIEW</span><span><b>CNN</b> / TENSORFLOW</span></figcaption>
+              </figure>
+              <div class="pj-tags">
+                <span class="tag">PYTHON</span><span class="tag">TENSORFLOW</span>
+                <span class="tag">OPENCV</span><span class="tag">CNN</span><span class="tag">FLASK</span>
+              </div>
+              <div class="pj-flip-hint">FLIP FOR THE BUILD <i data-lucide="rotate-cw"></i></div>
+            </div>
+            <div class="flip-face flip-face--back">
+              <div class="pj-back-top"><span><b>←</b> BACK TO OVERVIEW</span><span>DEEPFAKE DETECTION</span></div>
+              <h4 class="pj-back-title">the build —</h4>
+              <ul class="points">
+                <li>Designed &amp; trained an end-to-end CNN pipeline that classifies manipulated media with high accuracy.</li>
+                <li>Applied transfer learning in TensorFlow to lift classification accuracy on unseen test datasets.</li>
+                <li>Optimized preprocessing with OpenCV — end-to-end inference latency down by roughly 30%.</li>
+                <li>Deployed as a Flask web app with a clean interface for real-time uploads &amp; analysis.</li>
+              </ul>
+              <div class="pj-metrics">
+                <span class="metric">~30% ↓ LATENCY</span><span class="metric">TRANSFER LEARNING</span><span class="metric">REAL-TIME UI</span>
+              </div>
+              <div class="pj-links">
+                <a class="pj-link pj-link--main" href="#">VIEW PROJECT <i data-lucide="arrow-up-right"></i></a>
+                <a class="pj-link" href="#">SOURCE CODE <i data-lucide="github"></i></a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- N.02 AI Chatbot -->
+        <article class="flip-card pc-2 rv" style="--d:.1s" role="button" tabindex="0" aria-pressed="false" aria-label="AI Chatbot using NLP — flip card for details">
+          <div class="flip-inner">
+            <div class="flip-face flip-face--front">
+              <div class="pj-top"><span>NLP INTENT ENGINE</span><span>2026</span></div>
+              <div class="pj-no">Nº 02</div>
+              <h3 class="pj-title">AI CHATBOT USING NLP</h3>
+              <p class="pj-hook">Natural-language intent recognition with sub-second responses.</p>
+              <figure class="pj-media">
+                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 210'><rect width='400' height='210' fill='%23faf7ee'/><rect x='28' y='28' width='186' height='54' fill='%231c1a15'/><text x='44' y='61' font-family='monospace' font-size='13' fill='%23faf7ee'>intent: greet(user)</text><path d='M50 82l-12 14 2-14' fill='%231c1a15'/><rect x='188' y='104' width='186' height='54' fill='%23e24e1b'/><text x='204' y='137' font-family='monospace' font-size='13' fill='%23faf7ee'>hi! how can I help?</text><path d='M352 158l12 14-2-14' fill='%23e24e1b'/><g fill='%231c1a15'><rect x='28' y='172' width='8' height='16'/><rect x='44' y='164' width='8' height='32'/><rect x='60' y='156' width='8' height='48'/><rect x='76' y='168' width='8' height='24'/><rect x='92' y='150' width='8' height='60'/><rect x='108' y='172' width='8' height='16'/></g><g fill='%23e24e1b'><rect x='260' y='164' width='8' height='32'/><rect x='276' y='150' width='8' height='60'/><rect x='292' y='168' width='8' height='24'/><rect x='308' y='156' width='8' height='48'/><rect x='324' y='164' width='8' height='32'/><rect x='340' y='172' width='8' height='16'/></g><text x='18' y='24' font-family='monospace' font-size='11' fill='%23a09a8a'>TF-IDF → CLASSIFIER → RESPONSE</text></svg>" alt="Chatbot conversation preview — intent bubble and response bubble with audio waveforms" loading="lazy">
+                <figcaption><span>FIG. 02 — CONVERSATION FLOW</span><span><b>NLP</b> / TF-IDF</span></figcaption>
+              </figure>
+              <div class="pj-tags">
+                <span class="tag">PYTHON</span><span class="tag">NLP</span>
+                <span class="tag">INTENT CLASSIFICATION</span><span class="tag">FLASK</span>
+              </div>
+              <div class="pj-flip-hint">FLIP FOR THE BUILD <i data-lucide="rotate-cw"></i></div>
+            </div>
+            <div class="flip-face flip-face--back">
+              <div class="pj-back-top"><span><b>←</b> BACK TO OVERVIEW</span><span>AI CHATBOT</span></div>
+              <h4 class="pj-back-title">the build —</h4>
+              <ul class="points">
+                <li>NLP chatbot automating user interactions via real-time intent recognition &amp; entity extraction.</li>
+                <li>Full text-processing stack: tokenization → stop-word removal → TF-IDF vectorization into structured feature vectors.</li>
+                <li>Trained ML classifier wired into a lightweight web interface — sub-second responses across core query categories.</li>
+              </ul>
+              <div class="pj-metrics">
+                <span class="metric">SUB-SECOND</span><span class="metric">TF-IDF FEATURES</span><span class="metric">INTENT + ENTITY</span>
+              </div>
+              <div class="pj-links">
+                <a class="pj-link pj-link--main" href="#">VIEW PROJECT <i data-lucide="arrow-up-right"></i></a>
+                <a class="pj-link" href="#">SOURCE CODE <i data-lucide="github"></i></a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- N.03 Password Analyzer -->
+        <article class="flip-card pc-3 rv" role="button" tabindex="0" aria-pressed="false" aria-label="Password Strength Analyzer — flip card for details">
+          <div class="flip-inner">
+            <div class="flip-face flip-face--front">
+              <div class="pj-top"><span>SECURITY TOOLING</span><span>JUL 2025</span></div>
+              <div class="pj-front-grid">
+                <div>
+                  <div class="pj-no">Nº 03</div>
+                  <h3 class="pj-title">PASSWORD STRENGTH ANALYZER</h3>
+                  <div class="pj-tags">
+                    <span class="tag">PYTHON</span><span class="tag">CYBERSECURITY</span><span class="tag">ENTROPY HEURISTICS</span>
+                  </div>
+                </div>
+                <div>
+                  <figure class="pj-media">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 210'><rect width='400' height='210' fill='%23faf7ee'/><text x='22' y='36' font-family='monospace' font-size='12' fill='%231c1a15'>entropy = 62.7 bits</text><path d='M172 92V72a28 28 0 0 1 56 0v20' fill='none' stroke='%231c1a15' stroke-width='9'/><rect x='154' y='92' width='92' height='72' fill='%231c1a15'/><circle cx='200' cy='120' r='7' fill='%23e24e1b'/><rect x='196' y='128' width='8' height='22' fill='%23e24e1b'/><g><rect x='22' y='148' width='42' height='14' fill='%23e24e1b'/><rect x='70' y='148' width='42' height='14' fill='%23e24e1b' opacity='.55'/><rect x='118' y='148' width='42' height='14' fill='%231c1a15' opacity='.18'/><rect x='166' y='148' width='42' height='14' fill='%231c1a15' opacity='.18'/></g><text x='22' y='182' font-family='monospace' font-size='10' fill='%23a09a8a'>WEAK</text><text x='186' y='182' font-family='monospace' font-size='10' fill='%23a09a8a'>STRONG</text><text x='288' y='170' font-family='monospace' font-size='12' fill='%23e24e1b'>STRENGTH</text><text x='288' y='190' font-family='monospace' font-size='12' fill='%231c1a15'>HARDENED ✓</text></svg>" alt="Password analyzer preview — padlock with entropy readout and strength meter bars" loading="lazy">
+                    <figcaption><span>FIG. 03 — ENTROPY METER</span><span><b>CLI</b> + <b>GUI</b></span></figcaption>
+                  </figure>
+                  <p class="pj-hook">Entropy math &amp; pattern detection that grade your secrets — and harden them.</p>
+                  <div class="pj-flip-hint">FLIP FOR THE BUILD <i data-lucide="rotate-cw"></i></div>
+                </div>
+              </div>
+            </div>
+            <div class="flip-face flip-face--back">
+              <div class="pj-back-top"><span><b>←</b> BACK TO OVERVIEW</span><span>PASSWORD ANALYZER</span></div>
+              <h4 class="pj-back-title">the build —</h4>
+              <ul class="points">
+                <li>Dual CLI + GUI tool scoring password strength via mathematical entropy calculations &amp; pattern detection.</li>
+                <li>Rule-based + ML-assisted checks for dictionary words, keyboard sequences &amp; low-entropy strings.</li>
+                <li>Outputs clear hardening actions; fully extensible — new rules drop in via config files, zero core-logic edits.</li>
+              </ul>
+              <div class="pj-metrics">
+                <span class="metric">ENTROPY ENGINE</span><span class="metric">CLI + GUI</span><span class="metric">CONFIG-DRIVEN RULES</span>
+              </div>
+              <div class="pj-links">
+                <a class="pj-link pj-link--main" href="#">VIEW PROJECT <i data-lucide="arrow-up-right"></i></a>
+                <a class="pj-link" href="#">SOURCE CODE <i data-lucide="github"></i></a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- GitHub Aside -->
+        <aside class="pj-more rv" style="--d:.15s">
+          <span class="pj-more-k">( MORE )</span>
+          <a class="pj-more-link" href="https://github.com/06K07" target="_blank" rel="noopener">
+            github<em>/06K07</em> <i data-lucide="arrow-up-right"></i>
+          </a>
+          <p class="pj-more-note">Practice repos, coursework and one-off builds live here.</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 Experience Section -->
+  <section id="experience" class="sec">
+    <div class="wrap">
+      <header class="sec-head rv">
+        <span class="sec-idx">03</span>
+        <h2 class="sec-title" data-scramble>EXPERIENCE</h2>
+        <span class="sec-tag">( FIELD WORK &amp; EDUCATION )</span>
+      </header>
+      <div class="xp-grid">
+        <article class="xp-block rv">
+          <div class="xp-head">
+            <span class="xp-idx">/01</span>
+            <div>
+              <h3 class="xp-role">CYBERSECURITY TRAINEE</h3>
+              <div class="xp-org">NETMAX TECHNOLOGIES PVT. LTD. · CHANDIGARH, IN</div>
+            </div>
+            <span class="xp-date">JUL 2025</span>
+          </div>
+          <ul class="points">
+            <li>Conducted active vulnerability assessments and practical ethical-hacking tasks within sandboxed lab environments using Linux/Debian toolchains.</li>
+            <li>Monitored network traffic and analyzed packets using Wireshark to isolate security weaknesses, compiling comprehensive threat-mitigation reports.</li>
+            <li>Configured enterprise-level network topologies and modern routing protocols in Cisco Packet Tracer, documenting structural diagrams for senior review.</li>
+          </ul>
+        </article>
+        <aside class="rv" style="--d:.1s">
+          <h4 class="edu-h">( EDUCATION )</h4>
+          <div class="edu-item">
+            <div class="edu-deg">B.E. — Computer Science Engineering</div>
+            <div class="edu-org">Guru Nanak Dev Engineering College (IKG PTU)</div>
+            <div class="edu-when">EXPECTED JUNE 2027 · PUNJAB, IN</div>
+            <div class="pj-tags">
+              <span class="tag">DSA</span><span class="tag">DBMS</span><span class="tag">OS</span>
+              <span class="tag">SOFTWARE ENG.</span><span class="tag">AI</span><span class="tag">NETWORKS</span>
+            </div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-deg">Senior Secondary — PSEB Board</div>
+            <div class="edu-org">Government Senior Secondary School (Multi Purpose)</div>
+            <div class="edu-when">2020 – 2022 · SCORED 90.6%</div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 Skills Section -->
+  <section id="skills" class="sec">
+    <div class="wrap">
+      <header class="sec-head rv">
+        <span class="sec-idx">04</span>
+        <h2 class="sec-title" data-scramble>SKILLS</h2>
+        <span class="sec-tag">( HOVER OR TAP A ROW )</span>
+      </header>
+
+      <div class="skill-row rv">
+        <div class="sk-head">
+          <span class="sk-idx">/01</span><h3 class="sk-name">LANGUAGES</h3>
+          <span class="sk-count">04 ITEMS</span>
+          <span class="sk-plus"><i data-lucide="plus"></i></span>
+        </div>
+        <div class="sk-detail"><div class="sk-chips">
+          <span>PYTHON</span><span>C++</span><span>SQL</span><span>HTML / CSS</span>
+        </div></div>
+      </div>
+
+      <div class="skill-row rv" style="--d:.05s">
+        <div class="sk-head">
+          <span class="sk-idx">/02</span><h3 class="sk-name">AI / MACHINE LEARNING</h3>
+          <span class="sk-count">07 ITEMS</span>
+          <span class="sk-plus"><i data-lucide="plus"></i></span>
+        </div>
+        <div class="sk-detail"><div class="sk-chips">
+          <span>DEEP LEARNING</span><span>TENSORFLOW</span><span>SCIKIT-LEARN</span>
+          <span>OPENCV</span><span>CNNS</span><span>NLP</span><span>INTENT CLASSIFICATION</span>
+        </div></div>
+      </div>
+
+      <div class="skill-row rv" style="--d:.1s">
+        <div class="sk-head">
+          <span class="sk-idx">/03</span><h3 class="sk-name">DATA LIBRARIES</h3>
+          <span class="sk-count">04 ITEMS</span>
+          <span class="sk-plus"><i data-lucide="plus"></i></span>
+        </div>
+        <div class="sk-detail"><div class="sk-chips">
+          <span>PANDAS</span><span>NUMPY</span><span>MATPLOTLIB</span><span>TF-IDF VECTORIZATION</span>
+        </div></div>
+      </div>
+
+      <div class="skill-row rv" style="--d:.15s">
+        <div class="sk-head">
+          <span class="sk-idx">/04</span><h3 class="sk-name">CYBERSECURITY</h3>
+          <span class="sk-count">06 ITEMS</span>
+          <span class="sk-plus"><i data-lucide="plus"></i></span>
+        </div>
+        <div class="sk-detail"><div class="sk-chips">
+          <span>ETHICAL HACKING</span><span>VULNERABILITY ASSESSMENT</span><span>PENETRATION TESTING</span>
+          <span>WIRESHARK</span><span>LINUX (DEBIAN)</span><span>CISCO PACKET TRACER</span>
+        </div></div>
+      </div>
+
+      <div class="skill-row rv" style="--d:.2s">
+        <div class="sk-head">
+          <span class="sk-idx">/05</span><h3 class="sk-name">WEB &amp; TOOLS</h3>
+          <span class="sk-count">04 ITEMS</span>
+          <span class="sk-plus"><i data-lucide="plus"></i></span>
+        </div>
+        <div class="sk-detail"><div class="sk-chips">
+          <span>FLASK</span><span>REST APIS</span><span>GIT</span><span>GITHUB</span>
+        </div></div>
+      </div>
+
+      <p class="sk-note rv">( also fluent across <b>English</b>, <b>Hindi</b>, <b>Punjabi</b> &amp; conversational <b>Bengali</b> — multilingual by default. )</p>
+    </div>
+  </section>
+
+  <!-- 05 Certifications Section -->
+  <section id="certs" class="sec">
+    <div class="wrap">
+      <header class="sec-head rv">
+        <span class="sec-idx">05</span>
+        <h2 class="sec-title" data-scramble>CERTIFICATIONS</h2>
+        <span class="sec-tag">( CREDENTIALS )</span>
+      </header>
+      <ol class="cert-list">
+        <li class="cert-li rv">
+          <a class="cert-a" href="#" aria-label="Artificial Intelligence Fundamentals — IBM SkillsBuild">
+            <span class="cert-idx">i.</span>
+            <div><span class="cert-name">Artificial Intelligence Fundamentals</span><span class="cert-org">IBM SkillsBuild — Student Ambassador Program</span></div>
+            <span class="cert-cat">AI</span>
+            <span class="cert-arr"><i data-lucide="arrow-up-right"></i></span>
+          </a>
+        </li>
+        <li class="cert-li rv" style="--d:.05s">
+          <a class="cert-a" href="#" aria-label="AI Skills Challenge — Microsoft Learn">
+            <span class="cert-idx">ii.</span>
+            <div><span class="cert-name">AI Skills Challenge</span><span class="cert-org">Microsoft Learn</span></div>
+            <span class="cert-cat">AI</span>
+            <span class="cert-arr"><i data-lucide="arrow-up-right"></i></span>
+          </a>
+        </li>
+        <li class="cert-li rv" style="--d:.1s">
+          <a class="cert-a" href="#" aria-label="Cloud Skill Badge — Google Cloud Skills Boost">
+            <span class="cert-idx">iii.</span>
+            <div><span class="cert-name">Cloud Skill / Arcade Badge</span><span class="cert-org">Google Cloud Skills Boost</span></div>
+            <span class="cert-cat">CLOUD</span>
+            <span class="cert-arr"><i data-lucide="arrow-up-right"></i></span>
+          </a>
+        </li>
+        <li class="cert-li rv" style="--d:.15s">
+          <a class="cert-a" href="#" aria-label="Cybersecurity Certified — Tech Mahindra Foundation, Skill India and Netmax Technologies">
+            <span class="cert-idx">iv.</span>
+            <div><span class="cert-name">Cybersecurity Certified</span><span class="cert-org">Tech Mahindra Foundation · Skill India (NSDC) · Netmax Technologies</span></div>
+            <span class="cert-cat">SECURITY</span>
+            <span class="cert-arr"><i data-lucide="arrow-up-right"></i></span>
+          </a>
+        </li>
+        <li class="cert-li rv" style="--d:.2s">
+          <a class="cert-a" href="#" aria-label="Junior Software Developer — IT-ITeS SSC, Skill India">
+            <span class="cert-idx">v.</span>
+            <div><span class="cert-name">Junior Software Developer</span><span class="cert-org">IT-ITeS SSC — Skill India (NSDC)</span></div>
+            <span class="cert-cat">DEV</span>
+            <span class="cert-arr"><i data-lucide="arrow-up-right"></i></span>
+          </a>
+        </li>
+        <li class="cert-li rv" style="--d:.25s">
+          <a class="cert-a" href="#" aria-label="Generative AI Literacy — Simplilearn SkillUp">
+            <span class="cert-idx">vi.</span>
+            <div><span class="cert-name">Generative AI Literacy</span><span class="cert-org">Simplilearn SkillUp — SkillQuest</span></div>
+            <span class="cert-cat">GEN-AI</span>
+            <span class="cert-arr"><i data-lucide="arrow-up-right"></i></span>
+          </a>
+        </li>
+        <li class="cert-li rv" style="--d:.3s">
+          <a class="cert-a" href="#" aria-label="Basics of Python — Infosys Online">
+            <span class="cert-idx">vii.</span>
+            <div><span class="cert-name">Basics of Python</span><span class="cert-org">Infosys Online</span></div>
+            <span class="cert-cat">DEV</span>
+            <span class="cert-arr"><i data-lucide="arrow-up-right"></i></span>
+          </a>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 06 Contact Section -->
+  <section id="contact" class="sec">
+    <div class="wrap">
+      <header class="sec-head rv">
+        <span class="sec-idx">06</span>
+        <h2 class="sec-title" data-scramble>CONTACT</h2>
+        <span class="sec-tag">( SAY HELLO )</span>
+      </header>
+
+      <h3 class="contact-title">
+        <span class="ct-line rv">LET'S MAKE</span>
+        <span class="ct-line ct-serif rv" style="--d:.09s">something</span>
+        <span class="ct-line rv" style="--d:.18s" aria-label="INTELLIGENT">
+          <span class="ltr">I</span><span class="ltr">N</span><span class="ltr">T</span><span class="ltr">E</span><span class="ltr">L</span><span class="ltr">L</span><span class="ltr">I</span><span class="ltr">G</span><span class="ltr">E</span><span class="ltr">N</span><span class="ltr">T</span><span class="ltr">.</span>
+        </span>
+      </h3>
+
+      <div class="contact-grid">
+        <div class="rv">
+          <p class="contact-note">Open to stipend-based AI/ML engineering roles and internships — remote or on-site. The fastest way to reach me is email.</p>
+          <div class="email-row">
+            <a class="email-link" href="mailto:krishankumar01705@gmail.com"><i data-lucide="mail"></i>krishankumar01705@gmail.com</a>
+            <button class="copy-btn" id="copyEmail"><i data-lucide="copy"></i>COPY</button>
+          </div>
+          <a class="phone-link" href="tel:+919815329196"><i data-lucide="phone"></i>+91 98153 29196</a>
+        </div>
+        <div class="rv" style="--d:.1s">
+          <div class="soc">
+            <a class="soc-link" href="https://github.com/06K07" target="_blank" rel="noopener">
+              <i data-lucide="github"></i><span>GITHUB — /06K07</span>
+              <span class="soc-arr"><i data-lucide="arrow-up-right"></i></span>
+            </a>
+            <a class="soc-link" href="https://linkedin.com/in/krishan-jha-a97552285" target="_blank" rel="noopener">
+              <i data-lucide="linkedin"></i><span>LINKEDIN — /KRISHAN-JHA</span>
+              <span class="soc-arr"><i data-lucide="arrow-up-right"></i></span>
+            </a>
+            <div class="soc-loc"><i data-lucide="map-pin"></i><span>PUNJAB, INDIA — UTC +5:30</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="foot-in">
+        <span>© <span id="yr">2025</span> KRISHAN KUMAR</span>
+        <span>BONE / INK / VERMILION — BUILT BY HAND</span>
+        <a class="totop" href="#top">BACK TO TOP <i data-lucide="arrow-up"></i></a>
+      </div>
+    </footer>
+  </section>
+
+</main>
+
+<!-- Toast Notification -->
+<div id="toast" role="status"><i data-lucide="check"></i><span id="toastMsg">EMAIL COPIED</span></div>
+
+<!-- Icon Library -->
+<script src="https://unpkg.com/lucide@0.294.0/dist/umd/lucide.min.js"></script>
+
+<!-- Custom Scripts -->
+<script src="js/app.js"></script>
+<script type="module" src="js/morph-sculpture.js"></script>
+</body>
+</html>
