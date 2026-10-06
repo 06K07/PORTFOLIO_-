@@ -36,7 +36,7 @@ A high-performance, dark-editorial developer portfolio engineered with **HTML5, 
 ### Project Content Focus
 - **AI / Machine Learning:** Deep Learning, TensorFlow, OpenCV, CNNs, NLP, Scikit-Learn
 - **Cybersecurity:** Penetration Testing, Wireshark, Vulnerability Assessment, Cisco Packet Tracer
-- **Backend & Tooling:** Python, Flask, REST APIs, Git, SQL
+- **Backend & Tooling:** Python, Flask, APIs, Git, SQL
 
 ---
 
